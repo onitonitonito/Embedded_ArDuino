@@ -1,46 +1,49 @@
+// to Learn :
+// refer to https://www.youtu.be/
+
 int speakerPin = 9;
 
-//Jingle Bells
+//----------Jingle Bells
 int length = 26;
 char notes[] = "eeeeeeegcde fffffeeeeddedg";
 int beats[] = { 1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2};
 
-////Ding Dong Merrily on High
+//----------Ding Dong Merrily on High
 //int length = 73;
 //char notes[] = "ggagsed deggsgg ggagsed deggsgg DCbCDbCbabCabagabgagsgasgsesgeseddeggsgg "; // a space represents a rest
 //int beats[] = { 2,2,1,1,1,1,4,2,2,2,2,2,2,4,2,2,2,2,1,1,1,1,4,2,2,2,2,2,2,4,2,2,3,1,1,1,1,1,3,1,1,1,1,1,3,1,1,1,1,1,3,1,1,1,1,1,3,1,1,1,1,1,3,1,2,2,2,2,2,2,4,2,2 };
 
-////God Rest Ye Merry Gentlemen
+//----------God Rest Ye Merry Gentlemen
 //int length = 69;
 //char notes[] = "ddaagfedcdefga ddaagfedcdefga avgavCDagfdefgfgavaagfedfedgfgavCDagfed";
 //int beats[] = { 2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,4,2,2,2,2,2,2,4,1,1,2,4,2,2,2,2,2,2,2,2,2,2,8 };
 
-////O Little Town of Bethlehem
+//----------O Little Town of Bethlehem
 //int length = 71;
 //char notes[] = "cfffgagavCavafggfcfffgagavCavafggffaCDCvagfgavCcfagfccfffgagavCavafggf ";
 //int beats[] = { 2,2,2,2,2,1,1,1,1,2,2,2,1,1,2,2,6,2,2,2,2,2,1,1,1,1,2,2,2,1,1,2,2,6,1,1,3,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,4,4,2,2,2,2,1,1,1,1,2,2,2,1,1,2,2,6,2 };
 
-////While Shephards Watched
+//----------While Shephards Watched
 //int length = 29;
 //char notes[] = "faagfvvagaCCbCaDCvagfeagffef ";
 //int beats[] = { 2,3,1,2,2,2,2,2,2,2,2,2,2,6,2,3,1,2,2,2,2,2,2,2,2,2,2,6,2 };
 
-////In The Bleak Midwinter
+//----------In The Bleak Midwinter
 //int length = 51;
 //char notes[] = "aavCagfgagdgavCaggfgagff vavCDDaaCagfecavCagfgagff ";
 //int beats[] = { 2,3,1,2,2,4,4,3,1,2,2,8,3,1,2,2,3,1,4,2,2,3,1,6,2,3,1,2,2,2,2,2,2,2,2,2,2,6,2,2,2,2,2,4,4,2,2,3,1,8,8};
 
-////Hark the Herald
+//----------Hark the Herald
 //int length = 77;
 //char notes[] = "cffefaagCCCvagacffefaagCffeedcCCCfvaagCCCfvaagDDDCvavgavCffgaDDDCvavgavCffgf ";
 //int beats[] = {2,2,3,1,2,2,2,2,2,2,3,1,2,2,4,2,2,3,1,2,2,2,2,2,2,3,1,2,2,4,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,1,1,3,1,2,2,4,3,1,2,2,2,2,4,2,1,1,3,1,2,2,4,8};
 
-////O come all Ye Faithful
+//----------O come all Ye Faithful
 //int length = 64;
 //char notes[] = "ggdgadbabCbaggsesgabsedd DCbCbabgasedggsgagdbbabCbabCbagsgCbagg ";
 //int beats[] = { 2,4,2,2,4,4,2,2,2,2,4,2,2,4,2,2,2,2,2,2,4,3,1,6,2,4,2,2,4,4,2,2,2,2,3,1,2,2,2,2,2,2,4,2,2,2,2,2,2,4,2,2,2,2,2,2,4,2,2,4,3,1,6,8 };
 
-////O Come O Come Emmanuel
+//----------O Come O Come Emmanuel
 //int length = 63;
 //char notes[] = "egbbbaCbagabgegasedeaaeesgsedgabbbaCbag DD bb baCdagabgegasede ";
 //int beats[] = { 2,2,2,2,2,2,2,2,2,6,2,2,2,2,2,2,2,2,2,6,2,2,2,2,2,4,2,2,6,2,2,2,2,2,2,2,2,2,4,2,2,4,2,2,4,2,2,2,2,2,2,6,2,2,2,2,2,2,2,2,2,8,8 };

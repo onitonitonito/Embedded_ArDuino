@@ -1,8 +1,12 @@
+// to Learn :
+// refer to https://www.youtu.be/
+
 #include <DHT.h>
-#define DHTPIN 2 //온습도 센서 핀
-#define DHTTYPE DHT11 // 온습도 센서 타입
-int pan = 4; // 팬 핀
-//int nclls = 7; // 수위 센서 핀
+
+#define DHTTYPE DHT11   // Type of Temp&Humid Sensors
+#define DHTPIN 2        // Pin #  for Temp&Humid Sensors
+int pan = 4;            // pin for FAN
+int nclls = 7;        // pin for waterLEVEL gauge
 
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -11,16 +15,16 @@ void setup() {
 Serial.begin(9600);
 Serial.println("Start Humidity!");
 dht.begin();
-pinMode (pan, OUTPUT); //팬 셋업
-pinMode (7, INPUT); //수위 센서 셋업
+pinMode (pan, OUTPUT);  // Setup pinMode(4) for FAN
+pinMode (7, INPUT);     // setup pinMode(7) for levelGAUGE
 
 }
 
 void loop() {
-  float humi = dht.readHumidity();//습도 센서 읽기
-  int nclls = digitalRead(7); //수위 센서 읽기
+  float humi = dht.readHumidity();    //습도 센서 읽기
+  int nclls = digitalRead(7);         //수위 센서 읽기
 
-if (isnan(humi)){ //습도 센서 측정 부분
+if (isnan(humi)){                     //습도 센서 측정 부분
 
 }else{
    Serial.print("Humidity: ");
