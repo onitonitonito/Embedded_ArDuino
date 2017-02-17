@@ -1,18 +1,15 @@
 /*
- * Show messages on an 8x8 led matrix,
- * scrolling from right to left.
- *
- * Uses FrequencyTimer2 library to
- * constantly run an interrupt routine
- * at a specified frequency. This
- * refreshes the display without the
+ * Show messages on an 8x8 led matrix, scrolling from right to left.
+ * Uses FrequencyTimer2 library to constantly run an interrupt routine
+ * at a specified frequency. This refreshes the display without the
  * main loop having to do anything.
- *
  */
 
+ // to Learn :
+ // refer to https://www.youtu.be/
+ 
 #include <FrequencyTimer2.h>
-
-//표현할 문자를 2진수로 정의 새로운 문자 추가 가능.
+//
 #define SPACE { \
     {0, 0, 0, 0, 0, 0, 0, 0},  \
     {0, 0, 0, 0, 0, 0, 0, 0}, \
@@ -33,7 +30,7 @@
     {0, 1, 0, 0, 0, 0, 1, 0}, \
     {0, 1, 0, 0, 0, 0, 1, 0}  \
 }
-#define E  { \
+#define E { \
     {0, 1, 1, 1, 1, 1, 1, 0}, \
     {0, 1, 0, 0, 0, 0, 0, 0}, \
     {0, 1, 0, 0, 0, 0, 0, 0}, \
@@ -99,31 +96,26 @@ byte leds[8][8];
 
 // pin[xx] on led matrix connected to nn on Arduino (-1 is dummy to make array start at pos 1)
 int pins[17]= {-1, 5, 4, 3, 2, 14, 15, 16, 17, 13, 12, 11, 10, 9,8, 7, 6};
-
 // col[xx] of leds = pin yy on led matrix
 int cols[8] = {pins[13], pins[3], pins[4], pins[10], pins[06],pins[11], pins[15], pins[16]};
-
 // row[xx] of leds = pin yy on led matrix
 int rows[8] = {pins[9], pins[14], pins[8], pins[12], pins[1],pins[7], pins[2], pins[5]};
 
+const int numPatterns = 11;                 //Total number of Charactor
 
-const int numPatterns = 11;                 //표현할 글자 수
-
-//표현할 문자 패턴, numPatterns 의 갯수에 맞게 표시
-byte patterns[numPatterns][8][8] = {        //H,E,L,L,O,SPACE
+byte patterns[numPatterns][8][8] = {        //Using 8x8 Matrix, Show 11 letters
   H,E,L,L,O,W,O,R,L,D,SPACE
 };
 
 int pattern = 0;
 
 void setup() {
-  // sets the pins as output
-  for (int i = 1; i <= 16; i++) {
+  for (int i = 1; i <= 16; i++) {     // sets the pins as output
     pinMode(pins[i], OUTPUT);
   }
 
-  // set up cols and rows
-  for (int i = 1; i <= 8; i++) {
+
+  for (int i = 1; i <= 8; i++) {      // set up cols and rows
     digitalWrite(cols[i - 1], LOW);
   }
 

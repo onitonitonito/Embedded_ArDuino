@@ -1,0 +1,5 @@
+# a comment - this is ignore
+
+*.log	# Automatically genetarated when some run for history
+*.dat	# data file can be changed time to time according to program
+*.txt	# this is an OPTION / Some use .txt as a data file, you can turn it on/off!
