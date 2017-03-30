@@ -34,9 +34,11 @@ int main() {
         }
 
         printarr(&n, arr);
+
         getchar();
         printf("Is This a right Matrix which you intended (y/n)? )\n");
         scanf("%c", &select);
+
         if(select == 'Y')
             going = 1;
         else
@@ -52,6 +54,7 @@ int main() {
     getchar();
     printf("Wanna see the whole precess of GAUSS Elimination(y/n)?\n");
     scanf("%c", &select);
+
     if(select = 'Y')
         stepbull = 1;
     else

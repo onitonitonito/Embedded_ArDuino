@@ -1,13 +1,22 @@
 #include <stdio.h>
 
-int main(void)  {
+int converted_main (void)  {
   int a = 10;
-    printf("%d, a\n");
-    printf("HELLO WORLD~!!\n\n");
-    // printf("%s\n",a );
-    printf("%d, %d, %d, %d, a++, a--, --a, ++a\n\n");
+
+  printf("Start with a= %d,\n", a );
+  printf("HELLO WORLD~!!\n");
+  // printf("%s\n",a );
+  printf("a++= %d/%d, a--= %d/%d, --a= %d/%d, ++a= %d/%d\n\n\n",
+  a++,a, a--,a, --a,a, ++a,a);
   return 0;
 }
+
+int main (void) {
+  converted_main();
+  printf("HELLO WORLD~!!\n\n");
+  return 0;
+}
+
 
 
 /*

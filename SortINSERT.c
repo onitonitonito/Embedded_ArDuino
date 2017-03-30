@@ -4,7 +4,7 @@
 
 void InsertionSort(int *base, int n);
 int main(void) {
-  int arr[10] = { 9,4,3,10,5,8,7,6,2,1 };
+  int arr[10] = { 10,4,3,9,5,8,7,6,2,1 };
   InsertionSort(arr, 10);
   return 0;
 }
